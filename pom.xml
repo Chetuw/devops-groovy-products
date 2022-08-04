@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.0</version>
+		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>devops-groovy-products</groupId>
@@ -55,16 +55,23 @@
 <tag>v0.0.1</tag>
 
 </scm>
-	
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
+	
 		<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+        
+        <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>spring-mock-mvc</artifactId>
+      <scope>test</scope>
+    </dependency>
+        
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -73,32 +80,37 @@
 			<groupId>org.codehaus.groovy</groupId>
 			<artifactId>groovy</artifactId>
 		</dependency>
-		
-		<dependency>
-      		<groupId>io.rest-assured</groupId>
-      		<artifactId>spring-mock-mvc</artifactId>
-      	<scope>test</scope>
-    	</dependency>
-		
-	<dependency>	
-    	<groupId>org.spockframework</groupId>
-    	<artifactId>spock-core</artifactId>
-    	<version>2.0-groovy-3.0</version>
-    	<scope>test</scope>
-    </dependency>
-    <dependency>
-    	<groupId>org.spockframework</groupId>
-    	<artifactId>spock-spring</artifactId>
-    	<version>2.0-groovy-3.0</version>
-    	<scope>test</scope>
-	</dependency>
-
 
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+
+    <groupId>org.spockframework</groupId>
+
+    <artifactId>spock-core</artifactId>
+
+    <version>2.0-groovy-3.0</version>
+
+    <scope>test</scope>
+
+</dependency>
+
+
+
+       <dependency>
+
+    <groupId>org.spockframework</groupId>
+
+    <artifactId>spock-spring</artifactId>
+
+    <version>2.0-groovy-3.0</version>
+
+    <scope>test</scope>
+
+</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -205,35 +217,118 @@
 
 </plugin>
 
-<!--   <plugin>
 
-               <groupId>org.eclipse.jkube</groupId>
 
-               <artifactId>kubernetes-maven-plugin</artifactId>
 
-               <version>${jkube.version}</version>
 
-           </plugin> -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 <plugin>
+
+
+
+
 <groupId>org.jacoco</groupId>
+
+
+
+
 <artifactId>jacoco-maven-plugin</artifactId>
+
+
+
+
 <version>0.8.6</version>
+
+
+
+
 <executions>
+
+
+
+
 <execution>
+
+
+
+
 <id>default-prepare-agent</id>
+
+
+
+
 <goals>
+
+
+
+
 <goal>prepare-agent</goal>
+
+
+
+
 </goals>
+
+
+
+
 </execution>
+
+
+
+
 <execution>
+
+
+
+
 <id>default-report</id>
+
+
+
+
 <goals>
+
+
+
+
 <goal>report</goal>
+
+
+
+
 </goals>
+
+
+
+
 </execution>
+
+
+
+
 <execution>
+
+
+
+
 <id>default-check</id>
+
+
+
+
 <goals>
 
 
@@ -355,7 +450,7 @@
 
 
 </plugin>
-			
+						
 		</plugins>
 	</build>
 
