@@ -51,7 +51,7 @@
 
 <url>git@github.com:Chetuw/devops-groovy-products.git</url>
 
-<tag>v0.0.2</tag>
+<tag>SNAPSHOT</tag>
 
 </scm>
 	<dependencies>
