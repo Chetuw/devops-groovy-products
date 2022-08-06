@@ -46,9 +46,9 @@
 
 <scm>
 
-<connection>scm:git:https://git@github.com/Chetuw/devops-groovy-products.git</connection>
+<connection>scm:git:https://git@github.com:Chetuw/devops-groovy-products.git</connection>
 
-<developerConnection>scm:git:https://git@github.com/Chetuw/devops-groovy-products.git</developerConnection>
+<developerConnection>scm:git:https://git@github.com:Chetuw/devops-groovy-products.git</developerConnection>
 
 <url>git@github.com:/spring-boot-devops.git</url>
 
