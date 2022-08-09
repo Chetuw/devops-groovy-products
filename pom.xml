@@ -45,9 +45,9 @@
 
 <scm>
 
-<connection>scm:git:git@github.com:Chetuw/devops-groovy-products.git</connection>
+<connection>scm:git:https://git@github.com/Chetuw/devops-groovy-products.git</connection>
 
-<developerConnection>scm:git:git@github.com:Chetuw/devops-groovy-products.git</developerConnection>
+<developerConnection>scm:git:https://git@github.com/Chetuw/devops-groovy-products.git</developerConnection>
 
 <url>git@github.com:Chetuw/devops-groovy-products.git</url>
 
