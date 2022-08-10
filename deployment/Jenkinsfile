@@ -52,7 +52,6 @@ rtMaven.deployer server: server, releaseRepo: 'libs-release-local', snapshotRepo
 def buildInfo = rtMaven.run pom: 'pom.xml', goals: 'install'
 server.publishBuildInfo buildInfo
 }
-}
 
 stage('Deploy') {
        bat 'curl -u admin:admin -F filedata=target/**.war "http://localhost:5050/manager/text/deploy?path=/devops&update=true"'
