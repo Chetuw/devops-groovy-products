@@ -34,6 +34,15 @@ sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean verify"
 bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean verify/)
 }
 }
+
+stage('Docker Build'){
+if (isUnix()) {
+sh "docker build -t chetanwagadare/devops-groovy-products:latest ."
+} else {
+bat(/"docker build -t chetanwagadare/devops-groovy-products:latest ."/)
+}
+}
+
 stage('Sonar') {
 if (isUnix()) {
 sh "'${mvnHome}/bin/mvn' sonar:sonar"
@@ -53,10 +62,4 @@ def buildInfo = rtMaven.run pom: 'pom.xml', goals: 'install'
 server.publishBuildInfo buildInfo
 }
 
-stage('Deploy') {
-       bat 'curl -u admin:admin -F filedata=target/**.war "http://localhost:7070/manager/text/deploy?path=/devops&update=true"'
-   }
-   stage("Smoke Test"){
-       bat "curl --retry-delay 10 --retry 5 http://localhost:7070/devops"
-   }
 }
